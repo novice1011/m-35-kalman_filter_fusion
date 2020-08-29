@@ -110,7 +110,7 @@ sceme2 = x_hat_ar(1,:);
 %% PLOT
 
 figure(4);
-plot(x, y,'y',x, sceme2, 'r',x, sceme1, 'g', 'LineWidth', 2, 'MarkerSize', 4), xlabel('t'), ylabel('f(t)'), axis equal, grid on, hold on;
+plot(x, y,'y',x, sceme2, 'r',x, sceme1, 'g', 'LineWidth', 1, 'MarkerSize', 4), xlabel('t'), ylabel('f(t)'), axis equal, grid on, hold on;
 title(['1 sensor vs 2 sensor (not combined)']);
 legend({'ground truth', '2 sensor', '1 sensor'},'Location','northeast')
 set(gca,'FontSize',12);
