@@ -16,7 +16,7 @@ x = 0:dt:20*pi;
 y = 10*sin(x).*exp(-x/12);
 
 noise1 = normrnd(0, 1, size(x));
-noise2 = normrnd(0, 0.1, size(x));
+noise2 = normrnd(0, 0.2, size(x));
 
 y1_noisy = y + noise1;
 y2_noisy = y + noise2;
@@ -80,12 +80,12 @@ for i = 1:len
         % ----------------------------
         %calculate Filter gain
         K = P_p*C'/S;
-        % state posterior prediction
-        x_hat = x_p + K*(v);
-        % Posterior estimation of estimation covariance
-        P = (eye(size(P_p)) - K*C)*P_p;
     end
-    
+    % state posterior prediction
+    x_hat = x_p + K*(v);
+    % Posterior estimation of estimation covariance
+    P = (eye(size(P_p)) - K*C)*P_p;
+        
     x_hat_ar = [x_hat_ar x_hat];
 end
 x_hat_ar_2sen = x_hat_ar(1,:);
