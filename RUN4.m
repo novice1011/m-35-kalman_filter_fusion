@@ -6,11 +6,11 @@ dt = 0.01;
 x = 0:dt:20*pi;
 y = 10*sin(x).*exp(-x/12);
 
-noise1 = normrnd(0, 1, size(x));
-noise2 = normrnd(0, 0.1, size(x));
-noise3 = normrnd(0, 0.2, size(x));
-noise4 = normrnd(0, 0.2, size(x));
-noise5 = normrnd(0, 0.20, size(x));
+noise1 = normrnd(0, 2, size(x));
+noise2 = normrnd(0, 2, size(x));
+noise3 = normrnd(0, 2, size(x));
+noise4 = normrnd(0, 2, size(x));
+noise5 = normrnd(0, 2, size(x));
 
 y1_noisy = y + noise1;
 y2_noisy = y + noise2;
